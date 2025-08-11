@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Post</title>
+
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #B3ADE5;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        background-color: #ffffff;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 350px;
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: inherit;
+        font-size: 14px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    input[type="submit"] {
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+  </style>
+
+</head>
+<body>
+<form action="createPostServlet" method="post">
+  <label>Title</label>
+  <br>
+  <input type="text" name="title" id="title" placeholder="Title of Your Beautiful Post" required/>
+  <br>
+  <label>Content</label>
+  <br>
+  <textarea name="content" id="content" cols="30" rows="5" placeholder="Write Something Beautiful..."></textarea>
+  <br>
+  <input type="submit" value="create post" />
+</form>
+</body>
+</html>
